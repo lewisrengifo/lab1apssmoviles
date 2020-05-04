@@ -2,6 +2,8 @@ package Opcion2;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
+
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -29,7 +31,7 @@ public class JsonOption {
         JSONArray personasList = (JSONArray) obj;
         System.out.println(personasList);
 
-        //Iterate over employee array
+        //Iteracion del arreglo JSON
         personasList.forEach( emp -> parsePersonaObject( (JSONObject) emp ) );
 
     } catch (FileNotFoundException e) {
@@ -70,6 +72,32 @@ public class JsonOption {
         System.out.println(direccion_ip);
     }
 
+    private static void addPersonaObject(JSONObject persona, String nombre, String apellido, String email, String ciudad, String fecha_nacimiento, String peso, String direccion_ip)
+    {
+        JSONObject jo = new JSONObject;
+        Collection<JSONObject> items = new ArrayList<JSONObject>();
+        
+        
+        jo.add("nombre", nombre);
+        jo.add("apellido", apellido);
+        jo.add("email", genero);
+        jo.add("ciudad", ciudad);
+        jo.add("fecha_nacimiento", fecha_nacimiento);
+        jo.add("peso", nombre);
+        jo.add("direccion_ip", nombre);
+
+        
+
+
+
+
+
+    }
+
+
+
+
 
 
 }
+
