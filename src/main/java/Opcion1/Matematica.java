@@ -17,7 +17,9 @@ public class Matematica extends Menuopciones {
         switch (x) {
             case 1:
             numeroprimo();
+            break;
             case 2:
+                mcd();
                 break;
             case 3:
                 break;
@@ -54,6 +56,34 @@ public class Matematica extends Menuopciones {
         }
 
     }
+
+    public void mcd(){
+        Scanner sc = new Scanner(System.in);
+        int num1,num2;
+        System.out.println("Ingrese primer numero: ");
+        String num1String  =sc.next();
+        num1=Integer.valueOf(num1String);
+        System.out.println("Ingrese un segundo numero: ");
+        String num2String=sc.next();
+        num2=Integer.valueOf(num2String);
+        try {
+            while(num1 != num2)
+                if(num1>num2)
+                    num1= num1-num2;
+                else
+                    num2= num2 -num1;
+
+            System.out.println("El MCD es :" + num1);
+
+        } catch (NumberFormatException e){
+            System.out.println("Ingresa dos numeros");
+
+        }
+
+
+
+    }
+
 
 
 }
