@@ -1,4 +1,6 @@
-public abstract class Menu {
+package Opcion1;
+
+public abstract class Menuopciones {
     private int numeroOpcion;
     private String menuDescripcion;
     public abstract void mostrarMenu();
