@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Matematica {
 
+
     Scanner sc = new Scanner(System.in);
 
     public void ApssMates() {
@@ -37,6 +38,7 @@ public class Matematica {
         }
 
     }
+
 
 
 }
