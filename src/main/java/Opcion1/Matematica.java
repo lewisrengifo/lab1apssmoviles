@@ -4,6 +4,7 @@ package Opcion1;
 import java.util.Scanner;
 
 public class Matematica extends Menuopciones {
+    int n;
     @Override
     public void mostrarMenu() {
         System.out.println("1. Calcular numero primo");
@@ -24,6 +25,8 @@ public class Matematica extends Menuopciones {
             case 3:
                 break;
             case 4:
+                mostrarSerie();
+
                 break;
         }
     }
@@ -55,6 +58,29 @@ public class Matematica extends Menuopciones {
             System.out.println("Ingresa un numero");
         }
 
+    }
+    public int fibonacci(int n)
+    {
+        if (n>1){
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
+        else if (n==1) {
+            return 1;
+        }
+        else if (n==0){
+            return 0;
+        }
+        else{
+            System.out.println("Debes ingresar un tamaño mayor o igual a 1");
+            return -1;
+        }
+    }
+    public void mostrarSerie(){
+        System.out.println("serie fibonacci"+" de tamaño "+ n +":");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i)+" ");
+        }
+        System.out.println();
     }
 
     public void mcd(){
